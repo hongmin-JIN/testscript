@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link href="http://fonts.cdnfonts.com/css/metropolis-2" rel="stylesheet">
+    <title>iTECH</title>
+    <script src="./js/full-page-scroll.js"></script>
+	<style>
+	html{scroll-behavior: smooth;}
+	body{font-family:'NanumSquare','Metropolis';}
+	#wrap{background:#ed595f;}
+	.logo img{width:170px;}
+	.goal_bg{background:url(./images/main6.jpg) 50% 0/cover no-repeat #ed595f;}
+	.goal_text{background:rgba(26, 30, 36, 0.65);backdrop-filter:blur(30px);border-radius:50px;}
+	body, html {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	#wrap, .scroll-container {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	.scroll-container section {
+		width: 100%;
+		height: 100%;
+	}
+  .duck_wrap{
+    position: relative;
+  }
+  @media(max-width: 767px){
+	.border-sm-0{
+		border:0 !important;
+	}
+	.logo img{
+		width:100px;
+	}
+	html, body{font-size:0.7rem;}
+	/*.sec4_tit{border-bottom:2px solid #fff;border-right:0 !important}*/
+  }
+  @media (max-width: 1199.98px){
+    .duck_wrap .duck{
+      width: 50%;
+      margin: auto;
+    }
+	.duck_wrap .card{border:0px !important;color:#fff;background:transparent;}
+  }
+  @media (min-width: 1200px){
+     .duck_wrap .duck{
+      position: absolute;
+      top: 0%;
+      right: 0%;
+      width: 30%;
+    }
+  }
+}
+	</style>
+  </head>
+  <body>
+	<div id="wrap">
+		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+			<div class="container-xxl">
+				<a class="navbar-brand logo" href="#"><img src="/images/logo.png" class="img-fluid" alt="iTECH logo"/></a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav text-right">
+					<!-- <li class="nav-item"> -->
+					<!-- <a class="nav-link active" aria-current="page" href="#">Home</a> -->
+					<!-- </li> -->
+						<li class="nav-item">
+							<a class="nav-link" href="#">회사소개</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">서비스</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">고객센터</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">채용</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<main class="scroll-container" id="main">
+			<section id="section_1" class="d-flex align-items-center justify-content-center">
+				<div class="container-xxl">
+					<div class="row">
+						<div class="col-md-6 text-end">
+							<video src="./images/cycle.mp4" autoplay="" muted="" playsinline="" loop="" class="img-fluid"></video>
+						</div>
+						<div class="col-md-6 text-center text-white">
+							<div class="d-flex align-items-center justify-content-center h-100" >
+								<div class="card border-0 bg-transparent">
+									<div class="card-body">
+										<h2 class="card-title fs-1 fw-bold">편리함을 하나로</h2>
+										<p class="card-text fs-1 fw-bold">Comfort in One</p>
+										<a href="#" class="btn bg-transparent text-white border-white fw-bold border-2 rounded-3 w-100 fs-5">서비스 체험하기</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="section_2" class="d-flex align-items-center justify-content-center">
+				<div class="container-lg">
+					<div class="row duck_wrap">
+						<div class="col-md-12">
+							<div class="card p-5 rounded-3">
+								<div class="card-body">
+									<h2 class="card-title fw-bold">세상을 편리하게 만드는 기술을 고민합니다</h2>
+									<p class="card-text fw-bold fs-4 d-none d-md-block">기술의 발전은 세상을 편하게 합니다.<br/>아이테크는 세상을 더 편리하게 만드는 기술들에 대해 고민하고 개발합니다.<br/>오늘보다 더 나은 내일 그보다 더 발전하는 미래를 위해서<br/>끊임 없이 노력하고 생각들을 현실로 만들어갑니다.<br/>아이테크의 서비스에는 그런 철학과 노력들이 담겨있습니다.</p>
+								</div>
+							</div>
+						</div>
+						<div class="duck"><img id="itroimg" src="./images/duckon2.png" class="img-fluid"></div>
+					</div>
+				</div>
+			</section>
+			<section id="section_3" class="d-flex align-items-center justify-content-center goal_bg">
+				<div class="container-lg">
+					<div class="row position-relative">
+						<div class="col-md-12 py-5">
+							<div class="card py-5 text-center text-white border-0 goal_text">
+								<div class="card-body">
+									<h2 class="card-title fw-bold">아이테크팀의 목표</h2>
+									<p class="card-text fw-bold fs-4">기술의 발전은 세상을 편하게 합니다.<br/>아이테크는 세상을 더 편리하게 만드는 기술들에 대해 고민하고 개발합니다.<br/>오늘보다 더 나은 내일 그보다 더 발전하는 미래를 위해서<br/>끊임 없이 노력하고 생각들을 현실로 만들어갑니다.<br/>아이테크의 서비스에는 그런 철학과 노력들이 담겨있습니다.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="section_4" class="d-flex align-items-center justify-content-center">
+				<div class="container-lg">
+					<div class="row">
+						<div class="col-md-12 my-5">
+							<img src="https://via.placeholder.com/2000x600?text=BannerDesign" alt="배너디자인" class="img-fluid rounded-3">
+						</div>
+					</div>
+					<div class="card bg-transparent border-0 text-white">
+						<div class="row">
+							<div class="col-md-4 fs-2 fw-bold border-end border-2 border-sm-0">
+								<h2 class="card-title my-3 fw-bold fs-2 px-3 ">기술과 혁신으로 변화를 주도합니다.</h2>
+							</div>
+							<div class="col-md-8">
+								<div class="card-body">
+									<p class="card-text fs-4 fw-bold ">21세기의 메인키워드는 변화라고 생각합니다.<br/>
+변화는 곧 편리함으로 이어지기 마련이기 때문에<br/>
+저희는 편리성의 발전에 집중하기로 했습니다.<br/>
+아이테크가 만들어갈 '변화' 궁금하지 않으세요?<br/>
+궁금하시다면 지금한번 경험해 보세요.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="section_5" class="d-flex align-items-center justify-content-center">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-12 my-5">
+							<img src="https://via.placeholder.com/2000x600?text=BannerDesign" alt="배너디자인" class="img-fluid rounded-3">
+						</div>
+					</div>
+					<div class="row">
+						<div class="card border-0 bg-transparent text-white text-center">
+							<div class="card-body">
+								<h2 class="card-title fs-4 fw-bold">잊지마세요<br/>
+당신의 삶을 심플하게 만들어줄</h2>
+								<p class="card-text fs-1 fw-bold">단하나의 편리함.</p>
+								<p class="card-text"><img class="img-fluid w-25" src="./images/logo2.png"></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script>
+	var scrollIdx = 0,lastScrollTop = 0;
+	$(function(){
+		//$("main").css("margin-top",$("nav").height() + $("nav").css("padding-top") + $("nav").css("padding-bottom")).children("section").height($(window).height());
+		new fullScroll({
+		  // parent container
+		  container : 'main',
+		  // content section
+		  sections : 'section',
+		  // animation speed
+		  animateTime : 0.7,
+		  // easing for animation
+		  animateFunction : 'ease',
+		  // current position
+		  currentPosition: 0,
+		  // display dots navigation
+		  displayDots: false
+	   });
+		/*$(window).on("scroll",function(event){
+			var st = $(this).scrollTop();
+			if (st > lastScrollTop){
+			   // downscroll code
+				if(scrollIdx <= $("section").size()){
+					++scrollIdx;
+				}
+			} else {
+			  // upscroll code
+				if(scrollIdx > 0){
+					--scrollIdx;
+				}
+			}
+			console.log(scrollIdx);
+			event.stopPropagation();
+			$('html, body').animate({
+				scrollTop: $("section[data-idx='"+scrollIdx+"']").offset().top
+			}, 800, function(){
+
+				// Add hash (#) to URL when done scrolling (default click behavior)
+				//window.location.hash = hash;
+			});
+			lastScrollTop = st;
+		});*/
+	})
+	</script>
+  </body>
+</html>

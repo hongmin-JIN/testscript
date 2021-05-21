@@ -1,0 +1,141 @@
+<html>
+    <title>TO DO LIST!!</title>
+    <head>
+        <style>
+            body{
+                background-color: rgb(195, 231, 190);
+            }
+            .head__title{
+                text-align: center;
+                color:#00471b;
+            }
+            .input{
+                padding:5px;
+                width: 67%;
+                height: 30px;
+                vertical-align: top;
+                font-size: 16px;
+            }
+            .inputButton{
+                width: 50px;
+                height: 30px;
+            }
+            .loadButton{
+                width: 50px;
+                height: 30px;
+            }
+            .test{
+                display: none;
+            }
+            #wrap{
+                position: absolute;
+                margin-top: 110px;
+                margin-left: 640px;
+                border:10px solid #00471b;
+                border-radius: 30px;
+                width:30%;
+                height: 60%;
+            }
+            #inputSection{
+                text-align: center;
+                margin-left: 80px;
+            }
+            #inputSection input{
+                caret-color: #00471b;
+            }
+            #addList{
+                overflow-y: scroll;
+                margin-right: 8px;
+                height: 400px;
+            }
+            #addList li{
+                list-style: none;
+                text-align: center;
+                border-bottom: 2px solid #00471b;
+                margin-bottom: 15px;
+                padding-bottom: 5px;
+                width:500px;
+            }
+            #addList button{
+                width:20px;
+                height: 20px;
+                padding-left:3px;
+                margin-left: 10px;
+                float:right;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <h1 class=head__title>TO DO LIST</h1>
+            <div id="inputSection">
+                <input type='input' id="input" class="input" autofocus="true">
+                <button type='button' id='addButton' class="inputButton">+</button>
+                <button type='button' id='loadButton' class="loadButton">load</button>
+            </div>
+            <ul id="addList"></ul>
+        </div>
+        <script>
+            var data = {
+                state: 200,
+                data: {
+                    list: [
+                        {title: 'TEST1'},
+                        {title: 'TEST2'},
+                        {title: 'TEST3'},
+                        {title: 'TEST4'},
+                        {title: 'TEST5'},
+                        {title: 'TEST6'},
+                        {title: 'TEST7'},
+                    ]
+                }
+            }
+            
+            var addList = document.getElementById('addList');
+            var addButton = document.getElementById('addButton');
+            var loadButton = document.getElementById('loadButton');
+            var input = document.getElementById('input');
+
+            addButton.addEventListener('click', function(){
+                var list = document.createElement('li');
+                var span = document.createElement('span');
+                var buttonD = document.createElement('button');
+                var buttonE = document.createElement('button');
+                var editinput = document.createElement('input');
+
+                buttonD.innerHTML='D';
+                buttonE.innerHTML='E';
+                
+                span.innerHTML = input.value;
+
+                addList.appendChild(list);
+                list.appendChild(span);
+                list.appendChild(buttonD);
+                list.appendChild(buttonE);
+                
+                buttonD.addEventListener('click', function(){
+                    addList.removeChild(list);
+                })
+                buttonE.addEventListener('click', function(){
+                    var check = buttonE.getAttribute('data-check')
+                    if (check === 'true') {
+                        buttonE.setAttribute('data-check', 'false')
+                        list.appendChild(editinput);
+                        list.removeChild(span);
+                        console.log(editinput);
+                        editinput.value = span.innerText;
+                        buttonE.innerHTML='S';
+                    }
+                    else {
+                        console.log(buttonE);
+                        buttonE.setAttribute('data-check', 'true')
+                        span.innerText = editinput.value;
+                        buttonE.innerHTML='E';
+                    }
+                })
+                
+            })
+
+        </script>
+    </body>
+</html>
