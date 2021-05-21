@@ -63,6 +63,12 @@
                 margin-left: 10px;
                 float:right;
             }
+            .inputEdit{
+                display: none;
+            }
+            .inputEdit.active{
+                display: block;
+            }
         </style>
     </head>
     <body>
@@ -103,11 +109,16 @@
                 var buttonE = document.createElement('button');
                 var editinput = document.createElement('input');
 
+                editinput.classList.add('inputEdit');
+                span.classList.add('spanaa');
+
                 buttonD.innerHTML='D';
+                buttonE.setAttribute('data-check', 'false')
                 buttonE.innerHTML='E';
                 
                 span.innerHTML = input.value;
 
+                list.appendChild(editinput);
                 addList.appendChild(list);
                 list.appendChild(span);
                 list.appendChild(buttonD);
@@ -118,17 +129,17 @@
                 })
                 buttonE.addEventListener('click', function(){
                     var check = buttonE.getAttribute('data-check')
-                    if (check === 'true') {
-                        buttonE.setAttribute('data-check', 'false')
-                        list.appendChild(editinput);
-                        list.removeChild(span);
-                        console.log(editinput);
+                    console.log(check)
+                    if (check !== 'true') {
+                        buttonE.setAttribute('data-check', 'true')
+                        editinput.classList.add('active');
+                        // list.removeChild(span);
                         editinput.value = span.innerText;
                         buttonE.innerHTML='S';
                     }
                     else {
-                        console.log(buttonE);
-                        buttonE.setAttribute('data-check', 'true')
+                        editinput.classList.remove('active');
+                        buttonE.setAttribute('data-check', 'false')
                         span.innerText = editinput.value;
                         buttonE.innerHTML='E';
                     }
